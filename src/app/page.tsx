@@ -125,7 +125,14 @@ export default function HomePage() {
       </section>
 
       {/* Main Content */}
-      <section className="container mx-auto px-4">
+      <section className="container mx-auto px-4 relative">
+        {/* Background Particles Overlay */}
+        <div
+          className="absolute inset-0 -inset-x-4 bg-cover bg-center bg-no-repeat opacity-5 pointer-events-none"
+          style={{
+            backgroundImage: 'url(/generated/particles-overlay.png)'
+          }}
+        />
         {/* Featured News */}
         <div className="mb-12">
           <h2 className="gaming-title text-3xl mb-8 flex items-center">
@@ -205,37 +212,64 @@ export default function HomePage() {
         {/* Quick Access Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {/* Game Modes */}
-          <GamingCard className="text-center" variant="gradient">
-            <GamingIcon type="battle-royale" size="xl" />
-            <h3 className="gaming-subtitle text-xl mt-4 mb-2">Battle Royale</h3>
-            <p className="text-muted-foreground mb-4">
-              Jump into the action with 100 players fighting to be the last one standing
-            </p>
-            <button className="gaming-button w-full">
-              Play Now
-            </button>
+          <GamingCard className="text-center relative overflow-hidden" variant="gradient">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+              style={{
+                backgroundImage: 'url(/generated/battle-royale-mode.png)'
+              }}
+            />
+            <div className="relative z-10">
+              <GamingIcon type="battle-royale" size="xl" />
+              <h3 className="gaming-subtitle text-xl mt-4 mb-2">Battle Royale</h3>
+              <p className="text-muted-foreground mb-4">
+                Jump into the action with 100 players fighting to be the last one standing
+              </p>
+              <button className="gaming-button w-full">
+                Play Now
+              </button>
+            </div>
           </GamingCard>
 
-          <GamingCard className="text-center" variant="glow">
-            <GamingIcon type="creative" size="xl" />
-            <h3 className="gaming-subtitle text-xl mt-4 mb-2">Creative Mode</h3>
-            <p className="text-muted-foreground mb-4">
-              Build, explore, and play games created by the community
-            </p>
-            <button className="gaming-button w-full">
-              Explore
-            </button>
+          <GamingCard className="text-center relative overflow-hidden" variant="glow">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+              style={{
+                backgroundImage: 'url(/generated/creative-mode.png)'
+              }}
+            />
+            <div className="relative z-10">
+              <GamingIcon type="creative" size="xl" />
+              <h3 className="gaming-subtitle text-xl mt-4 mb-2">Creative Mode</h3>
+              <p className="text-muted-foreground mb-4">
+                Build, explore, and play games created by the community
+              </p>
+              <button className="gaming-button w-full">
+                Explore
+              </button>
+            </div>
           </GamingCard>
 
-          <GamingCard className="text-center" variant="pulse">
-            <GamingIcon type="tournament" size="xl" />
-            <h3 className="gaming-subtitle text-xl mt-4 mb-2">Tournaments</h3>
-            <p className="text-muted-foreground mb-4">
-              Compete in official tournaments and climb the competitive ranks
-            </p>
-            <button className="gaming-button w-full">
-              Compete
-            </button>
+          <GamingCard className="text-center relative overflow-hidden" variant="pulse">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+              style={{
+                backgroundImage: 'url(/generated/tournament-mode.png)'
+              }}
+            />
+            <div className="relative z-10">
+              <GamingIcon type="tournament" size="xl" />
+              <h3 className="gaming-subtitle text-xl mt-4 mb-2">Tournaments</h3>
+              <p className="text-muted-foreground mb-4">
+                Compete in official tournaments and climb the competitive ranks
+              </p>
+              <button className="gaming-button w-full">
+                Compete
+              </button>
+            </div>
           </GamingCard>
         </div>
       </section>

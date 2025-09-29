@@ -17,8 +17,16 @@ export function HeroBanner({
 }: HeroBannerProps) {
   return (
     <section className={cn('relative overflow-hidden', className)}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 gaming-bg" />
+      {/* Hero Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/generated/hero-banner-bg.png)'
+        }}
+      />
+
+      {/* Animated Background Overlay */}
+      <div className="absolute inset-0 gaming-bg opacity-60" />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-background/50 via-transparent to-background/50" />

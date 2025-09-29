@@ -63,12 +63,21 @@ export function NewsCard({
         <span className="text-xs text-muted-foreground">{timestamp}</span>
       </div>
 
-      {/* Image Placeholder */}
+      {/* Image */}
       {image && (
         <div className="mb-4 rounded-lg overflow-hidden">
-          <div className="gaming-gradient-secondary h-48 flex items-center justify-center text-2xl font-bold">
-            🎮 {category.toUpperCase()}
-          </div>
+          {category === 'Battle Pass' && priority ? (
+            <div
+              className="h-48 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: 'url(/generated/battle-pass-news.png)'
+              }}
+            />
+          ) : (
+            <div className="gaming-gradient-secondary h-48 flex items-center justify-center text-2xl font-bold">
+              🎮 {category.toUpperCase()}
+            </div>
+          )}
         </div>
       )}
 
